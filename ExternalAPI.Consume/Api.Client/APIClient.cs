@@ -29,7 +29,7 @@ namespace Api.Client
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Add("Authorization", $"ApiKey {this._apiKey}");
-
+                //testing
                 var result = await client.PostAsJsonAsync(this._baseURL, parameters);
                 var apiResult = result;
                 if (result.IsSuccessStatusCode)
